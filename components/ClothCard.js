@@ -2,10 +2,10 @@
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
 import { COLORS } from '../theme'
 
-export default function ClothCard({ item, onPress, small = false }) {
+export default function ClothCard({ item, onPress, small = false, selected = false }) {
   return (
     <TouchableOpacity
-      style={[styles.card, small && styles.small]}
+      style={[styles.card, small && styles.small, selected && styles.selected]}
       onPress={onPress}
       disabled={!onPress}
     >
@@ -45,6 +45,10 @@ const styles = StyleSheet.create({
   small: {
     width: 100,
     marginRight: 8,
+  },
+  selected: {
+    borderWidth: 2,
+    borderColor: COLORS.main,
   },
   image: {
     width: '100%',

@@ -34,7 +34,7 @@ screens/HomeScreen.js   옷장 목록, 이름 검색, 종류별 필터
 screens/AddScreen.js    사진 → AI 분석 → 저장
 screens/DetailScreen.js 세탁·보관 정보, 정보·사진 수정, 세탁 토글, 삭제
 screens/LaundryScreen.js 빨래 바구니, 세탁 완료 / 바구니에 넣기
-screens/ShoppingScreen.js 옷장을 보고 살 옷 추천
+screens/ShoppingScreen.js 살 옷 추천 (옷 하나 골라서 / 옷장 전체 분석)
 components/ClothCard.js 옷 카드
 components/TabBar.js    하단 탭 메뉴 (옷장 · 옷 추가 · 세탁 · 살 옷)
 theme.js                색상
@@ -47,7 +47,8 @@ theme.js                색상
   → onAdd → axios.post → db.json
   → Detail: 정보 수정·세탁 필요 토글 (axios.patch) / 삭제 (axios.delete)
   → Laundry: needWash인 옷 = 빨래 바구니, 세탁 완료 / 바구니에 넣기 (axios.patch)
-  → Shopping: 옷장 전체를 chat(AI)에 전송 → 부족한 옷 3개 + 함께 입기 좋은 내 옷 추천
+  → Shopping: 옷 하나 선택 → chat(AI) → 어울리는 색상·아이템 + 같이 입을 내 옷
+              옷장 전체 → chat(AI) → 부족한 옷 3개 + 함께 입기 좋은 내 옷
 ```
 
 ## 수업 내용 대응
