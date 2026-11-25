@@ -9,7 +9,7 @@
    npm install
    npx expo install --fix
    ```
-2. API 키 넣기: `.env.local.example`을 복사해서 이름을 `.env.local`로 바꾸고 OpenAI 키 입력
+2. API 키 넣기: `.env.local.example`을 복사해서 이름을 `.env.local`로 바꾸고 Gemini 키 입력 ([Google AI Studio](https://aistudio.google.com/apikey)에서 발급)
 3. 터미널 1: 데이터 서버 켜기
    ```
    npm run server
@@ -28,7 +28,7 @@
 App.js                  화면 전환(하단 탭) + 옷 목록 상태 + CRUD 함수
 db.json                 json-server 데이터 (clothes)
 api/closetApi.js        json-server 요청 (axios)
-api/llmapi_openai.js    OpenAI 요청 (chat, describeImage) — 13주차 수업 모듈 방식
+api/llmapi_openai.js    Gemini 요청 (chat, describeImage) — 13주차 수업 모듈 방식, OpenAI 호환 주소 사용
 api/imageUtil.js        사진 고르기·찍기, 저장용 작은 사진 만들기
 screens/HomeScreen.js   옷장 목록, 이름 검색, 종류별 필터
 screens/AddScreen.js    사진 → AI 분석 → 저장
