@@ -71,3 +71,9 @@ theme.js                색상
 - `EXPO_PUBLIC_` 키는 앱 안에 그대로 들어가요. 수업 데모용이고, 실제 서비스라면 서버를 거쳐 호출해야 해요.
 - json-server는 한 번에 약 100KB까지만 받아요. 그래서 사진은 `expo-image-manipulator`로 가로 300px로 줄인 뒤 db.json의 `imageUri`에 저장해요 (AI에는 원본 품질로 보냄).
 - AI 분석이 틀릴 수 있어서 저장 전에 직접 고칠 수 있게 했어요.
+
+## 이미지 출처
+
+- 연청 와이드 데님 사진: [P1898, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Blue_2026-11-14_jeans_01.jpg), CC BY 4.0 (300px로 축소)
+- 화이트 셔츠 사진: Avtar Singh, [Unsplash](https://unsplash.com/photos/a-plain-white-t-shirt-hangs-on-a-wooden-hanger-8ACmRoleM24), Unsplash License
+- 베이지 니트·블랙 코트: 직접 그린 일러스트

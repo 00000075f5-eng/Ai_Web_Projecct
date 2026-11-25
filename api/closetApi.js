@@ -1,10 +1,14 @@
 // json-server(db.json)에 보내는 요청 모음 — 11주차 [비동기] axios + async/await
 import axios from 'axios'
+import Constants from 'expo-constants'
 
 // 웹 브라우저로 실행 : localhost
-// 휴대폰 Expo Go로 실행 : PC의 IP 주소로 바꾸기 (예: 'http://192.168.0.10:3000')
+// 휴대폰 Expo Go로 실행 : Expo가 알려주는 PC의 IP 주소를 자동으로 사용
+//   (localhost는 휴대폰 자기 자신이라 PC 서버에 연결되지 않음)
+// 자동으로 안 잡히면 직접 적기 (예: 'http://192.168.0.10:3000')
 //   → PC에서 cmd 열고 ipconfig 입력 → IPv4 주소 확인
-export const SERVER = 'http://localhost:3000'
+const expoHost = Constants.expoConfig?.hostUri?.split(':')[0]
+export const SERVER = `http://${expoHost || 'localhost'}:3000`
 
 // ---------- 옷 (clothes) ----------
 // Read : 전체 목록
